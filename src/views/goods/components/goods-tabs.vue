@@ -2,8 +2,8 @@
   <div class="goods-tabs">
     <nav>
       <a
-        @click="activeName = 'GoodsDetial'"
-        :class="{ active: activeName === 'GoodsDetial' }"
+        @click="activeName = 'GoodsDetail'"
+        :class="{ active: activeName === 'GoodsDetail' }"
         href="javascript:;"
         >商品详情</a
       >
@@ -17,7 +17,7 @@
     <!-- 切换内容的地方 其实两个组件-->
     <!-- 在vue中动态的去切换组件其实可以使用动态组件component组件 -->
     <!-- is属性用来决定component动态组件渲染为那个组件，组件的名称 -->
-    <!-- <GoodsDetial v-if="activeName === 'GoodsDetial'" />
+    <!-- <GoodsDetail v-if="activeName === 'GoodsDetail'" />
     <GoodsComment v-if="activeName === 'GoodsComment'" /> -->
     <component :is="activeName"></component>
   </div>
@@ -30,7 +30,7 @@ export default {
   name: 'GoodsTabs',
   components: { GoodsDetail, GoodsComment },
   setup () {
-    // activeName的值：GoodsDetial  GoodsComment
+    // activeName的值：GoodsDetail  GoodsComment
     const activeName = ref('GoodsDetail')
     // goods详情数据
     const goods = inject('goods')

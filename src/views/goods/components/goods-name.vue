@@ -44,12 +44,12 @@ export default {
     const fullLocation = ref('北京市 市辖区 东城区')
     // 取出用户收货地址中默认的地址给四个数据赋值 (已登录)
     if (props.goods.userAddresses) {
-      const defaultAddresss = props.goods.userAddresses.find(item => item.isDefualt === 1)
-      if (defaultAddresss) {
-        provinceCode.value = defaultAddresss.provinceCode
-        cityCode.value = defaultAddresss.cityCode
-        countyCode.value = defaultAddresss.countyCode
-        fullLocation.value = defaultAddresss.fullLocation
+      const defaultAddress = props.goods.userAddresses.find(item => item.isDefualt === 1)
+      if (defaultAddress) {
+        provinceCode.value = defaultAddress.provinceCode
+        cityCode.value = defaultAddress.cityCode
+        countyCode.value = defaultAddress.countyCode
+        fullLocation.value = defaultAddress.fullLocation
       }
     }
     // 城市选中事件处理函数

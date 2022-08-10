@@ -29,10 +29,10 @@ export default {
 }
 //覆盖样式
 .xtx-carousel {
-  ::v-deep .carousel-btn.prev {
+  :v-deep(.carousel-btn.prev) {
     left: 270px;
   }
-  ::v-deep .carousel-indicator {
+  :v-deep(.carousel-indicator) {
     padding-left: 250px;
   }
 }

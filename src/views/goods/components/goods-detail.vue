@@ -14,7 +14,7 @@
 <script>
 import { inject } from 'vue'
 export default {
-  name: 'GoodsDetial',
+  name: 'GoodsDetail',
   setup () {
     const goods = inject('goods')
     return { goods }
